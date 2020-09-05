@@ -41,4 +41,4 @@ implementation 'com.github.mbobiosio:LifecycleConnectivity:1.0.0'
 LICENCE
 -----
 
-LifecycleConnectivity by [Mbuodile Obiosio]<kumarmanas04@gmail.com> is licensed under a [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+LifecycleConnectivity by [Mbuodile Obiosio]<cazewonder@gmail.com> is licensed under a [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
