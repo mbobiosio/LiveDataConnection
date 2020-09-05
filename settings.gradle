@@ -1,2 +1,3 @@
+include ':lifecycleconnectivity'
 include ':app'
 rootProject.name = "LifecycleConnectivity"
