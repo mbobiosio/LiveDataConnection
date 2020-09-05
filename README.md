@@ -1,5 +1,5 @@
 <br>
-A super simple lifecycle aware solution written in Kotlin that helps you to capture network connectivity events with support for lower APIs
+A super simple, super light-weight lifecycle aware solution written in Kotlin that helps you to capture network connectivity events with support for lower APIs
 
 USAGE
 -----
@@ -23,19 +23,19 @@ implementation 'com.github.mbobiosio:LifecycleConnectivity:1.0.0'
 -   Use in your Activity
 
 ```kotlin
-        val lifecycleService = LifecycleService(this)
-        lifecycleService.observe(this, {
-            Log.d("Status", "$it")
-        })
+ val lifecycleService = LifecycleService(this)
+ lifecycleService.observe(this, {
+     Log.d("Status", "$it")
+ })
 ```
 
 -   Use in your Fragment
 
 ```kotlin
-        val lifecycleService = LifecycleService(activity as Activity)
-        lifecycleService.observe(viewLifecycleOwner, {
+ val lifecycleService = LifecycleService(activity as Activity)
+ lifecycleService.observe(viewLifecycleOwner, {
 
-        })
+ })
 ```
 
 LICENCE
