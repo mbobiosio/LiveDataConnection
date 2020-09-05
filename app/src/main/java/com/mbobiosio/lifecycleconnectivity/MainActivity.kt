@@ -3,6 +3,7 @@ package com.mbobiosio.lifecycleconnectivity
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,17 +12,9 @@ class MainActivity : AppCompatActivity() {
 
         val lifecycleService = LifecycleService(this)
         lifecycleService.observe(this, {
-            Log.d("TAG", "$it")
+            Log.d("Status", "$it")
+            status.text = it.toString()
         })
-
-        /*val lifecycleService = LifecycleService(this)
-        lifecycleService.observe(this, {
-            Log.d("TAG", "Status $it")
-            when(it) {
-                true -> status.text = "Connected"
-                false -> status.text = "Disconnected"
-            }
-        })*/
 
     }
 }
