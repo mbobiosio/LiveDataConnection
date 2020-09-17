@@ -32,7 +32,7 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
     override fun onInactive() {
         super.onInactive()
         when {
-            AppUtil.isLollipopUp() -> {
+            isLollipopUp() -> {
                 connManager.unregisterNetworkCallback(connCallback)
             }
             else -> {
@@ -47,12 +47,12 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
         notifyStatus()
 
         when {
-            AppUtil.isNougatUp() -> connManager.registerDefaultNetworkCallback(marshMallowCallback())
-            AppUtil.isMarshMallowUp() -> marshMallowStatusRequest()
-            AppUtil.isLollipopUp() -> lollipopStatusRequest()
+            isNougatUp() -> connManager.registerDefaultNetworkCallback(marshMallowCallback())
+            isMarshMallowUp() -> marshMallowStatusRequest()
+            isLollipopUp() -> lollipopStatusRequest()
             else -> {
                 when {
-                    AppUtil.isLollipopUp() -> {
+                    isLollipopUp() -> {
                         context.registerReceiver(networkStatusReceiver,
                             IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
                     }
@@ -73,7 +73,7 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
     }
 
     private fun lollipopCallback(): ConnectivityManager.NetworkCallback {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (isLollipopUp()) {
             connCallback = object : ConnectivityManager.NetworkCallback() {
                 override fun onAvailable(network: Network) {
                     postValue(true)
@@ -90,7 +90,7 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
     }
 
     private fun marshMallowCallback(): ConnectivityManager.NetworkCallback {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (isMarshMallowUp()) {
             connCallback = object : ConnectivityManager.NetworkCallback() {
                 override fun onCapabilitiesChanged(
                     network: Network,
