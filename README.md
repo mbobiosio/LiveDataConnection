@@ -1,6 +1,4 @@
 <br>
-[![](https://jitpack.io/v/mbobiosio/LifecycleConnectivity.svg)](https://jitpack.io/#mbobiosio/LifecycleConnectivity)
-
 A super simple, super light-weight lifecycle aware solution written in Kotlin that helps you to capture network connectivity events with support for lower APIs
 
 USAGE
