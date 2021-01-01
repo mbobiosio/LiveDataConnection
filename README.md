@@ -40,6 +40,11 @@ implementation 'com.github.mbobiosio:lifecycleconnectivity:1.0.1'
  })
 ```
 
+## Contribute
+
+If you want to contribute to this app, you're always welcome!
+See [Contributing Guidelines](CONTRIBUTING.md).
+
 ## 📝 License
 This project is released under the MIT license.
 See [LICENSE](./LICENSE) for details.
