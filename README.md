@@ -1,3 +1,5 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/55d6efdea3d34a0ea16b44b0c1e27174)](https://www.codacy.com/gh/mbobiosio/LifecycleConnectivity/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mbobiosio/LifecycleConnectivity&amp;utm_campaign=Badge_Grade)
+
 <br>
 A super simple, super light-weight lifecycle aware solution written in Kotlin that helps you to capture network connectivity events with support for lower APIs
 

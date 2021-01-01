@@ -1,6 +1,17 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "kotlin-android-extensions"
+    id "org.sonarqube" version "3.0"
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "mbobiosio_LifecycleConnectivity"
+        property "sonar.organization", "mbobiosio"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
 
 android {
     compileSdkVersion 30

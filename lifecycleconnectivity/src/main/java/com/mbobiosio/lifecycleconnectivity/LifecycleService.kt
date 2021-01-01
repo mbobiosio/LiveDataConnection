@@ -59,7 +59,6 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
                 }
             }
         }
-
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -120,5 +119,4 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
         val activeNetwork: NetworkInfo? = connManager.activeNetworkInfo
         postValue(activeNetwork?.isConnected == true)
     }
-
 }

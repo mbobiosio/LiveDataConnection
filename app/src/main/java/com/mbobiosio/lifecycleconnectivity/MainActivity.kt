@@ -16,7 +16,5 @@ class MainActivity : AppCompatActivity() {
             Log.d("Status", "$it")
             status.text = it.toString()
         })
-
     }
-
 }
