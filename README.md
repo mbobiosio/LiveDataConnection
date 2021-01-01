@@ -1,4 +1,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/55d6efdea3d34a0ea16b44b0c1e27174)](https://www.codacy.com/gh/mbobiosio/LifecycleConnectivity/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mbobiosio/LifecycleConnectivity&amp;utm_campaign=Badge_Grade)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=mbobiosio_LifecycleConnectivity&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=mbobiosio_LifecycleConnectivity)
+[![Platform](https://img.shields.io/badge/platform-android-brightgreen)](https://developer.android.com/reference)
+[![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://developer.android.com/studio/releases/platforms#4.1)
 
 <br>
 A super simple, super light-weight lifecycle aware solution written in Kotlin that helps you to capture network connectivity events with support for lower APIs
