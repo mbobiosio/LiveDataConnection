@@ -4,6 +4,8 @@ A super simple, super light-weight lifecycle aware solution written in Kotlin th
 USAGE
 -----
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc5cc0ac9574421dae601f9d86e2bbca)](https://app.codacy.com/gh/mbobiosio/LifecycleConnectivity?utm_source=github.com&utm_medium=referral&utm_content=mbobiosio/LifecycleConnectivity&utm_campaign=Badge_Grade)
+
 ## Including in your project
 Add below codes to your <b>root</b> build.gradle
 ```
