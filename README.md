@@ -23,7 +23,7 @@ allprojects {
 Add lifecycleconnectivity dependency to your project's <b>module</b> build.gradle
 
 ```groovy
-implementation 'com.github.mbobiosio:lifecycleconnectivity:1.0.2'
+implementation 'com.github.mbobiosio:connectivitylivedata:1.0.2'
 ```
 
 -   Use in your Activity
