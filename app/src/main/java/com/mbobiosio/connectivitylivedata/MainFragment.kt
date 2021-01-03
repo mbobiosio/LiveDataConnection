@@ -1,4 +1,4 @@
-package com.mbobiosio.lifecycleconnectivity
+package com.mbobiosio.connectivitylivedata
 
 import android.app.Activity
 import android.os.Bundle

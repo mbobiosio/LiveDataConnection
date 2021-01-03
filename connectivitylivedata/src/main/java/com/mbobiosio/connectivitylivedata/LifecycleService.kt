@@ -1,4 +1,4 @@
-package com.mbobiosio.lifecycleconnectivity
+package com.mbobiosio.connectivitylivedata
 
 import android.annotation.TargetApi
 import android.content.BroadcastReceiver
@@ -32,7 +32,7 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
     override fun onInactive() {
         super.onInactive()
         when {
-            isLollipopUp() -> {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP -> {
                 connManager.unregisterNetworkCallback(connCallback)
             }
             else -> {
@@ -47,12 +47,12 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
         notifyStatus()
 
         when {
-            isNougatUp() -> connManager.registerDefaultNetworkCallback(marshMallowCallback())
-            isMarshMallowUp() -> marshMallowStatusRequest()
-            isLollipopUp() -> lollipopStatusRequest()
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.N -> connManager.registerDefaultNetworkCallback(marshMallowCallback())
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.M -> marshMallowStatusRequest()
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP -> lollipopStatusRequest()
             else -> {
                 when {
-                    isLollipopUp() -> {
+                    Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP -> {
                         context.registerReceiver(networkStatusReceiver,
                             IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
                     }
@@ -72,7 +72,7 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
     }
 
     private fun lollipopCallback(): ConnectivityManager.NetworkCallback {
-        if (isLollipopUp()) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             connCallback = object : ConnectivityManager.NetworkCallback() {
                 override fun onAvailable(network: Network) {
                     postValue(true)
@@ -89,7 +89,7 @@ class LifecycleService(private val context: Context) : LiveData<Boolean>() {
     }
 
     private fun marshMallowCallback(): ConnectivityManager.NetworkCallback {
-        if (isMarshMallowUp()) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             connCallback = object : ConnectivityManager.NetworkCallback() {
                 override fun onCapabilitiesChanged(
                     network: Network,

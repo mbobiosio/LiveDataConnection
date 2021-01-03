@@ -1,4 +1,4 @@
-package com.mbobiosio.lifecycleconnectivity
+package com.mbobiosio.connectivitylivedata
 
 import android.os.Bundle
 import android.util.Log
