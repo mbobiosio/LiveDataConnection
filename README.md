@@ -2,6 +2,7 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=mbobiosio_LifecycleConnectivity&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=mbobiosio_LifecycleConnectivity)
 [![Platform](https://img.shields.io/badge/platform-android-brightgreen)](https://developer.android.com/reference)
 [![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://developer.android.com/studio/releases/platforms#4.1)
+[![](https://jitpack.io/v/mbobiosio/ConnectivityLiveData.svg)](https://jitpack.io/#mbobiosio/ConnectivityLiveData)
 
 <br>
 A super simple, super light-weight lifecycle aware solution written in Kotlin that helps you to capture network connectivity events with support for lower APIs
