@@ -1,4 +1,4 @@
-package com.mbobiosio.connectivitylivedata
+package com.mbobiosio.connectionlivedata
 
 import org.junit.Test
 

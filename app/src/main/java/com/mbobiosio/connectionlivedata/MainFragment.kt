@@ -1,4 +1,4 @@
-package com.mbobiosio.connectivitylivedata
+package com.mbobiosio.connectionlivedata
 
 import android.app.Activity
 import android.os.Bundle
@@ -17,8 +17,8 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val lifecycleService = LifecycleService(activity as Activity)
-        lifecycleService.observe(viewLifecycleOwner, {
+        val connectionLiveData = ConnectionLiveData(activity as Activity)
+        connectionLiveData.observe(viewLifecycleOwner, {
             status.text = it.toString()
         })
     }

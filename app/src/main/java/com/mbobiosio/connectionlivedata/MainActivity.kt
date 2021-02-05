@@ -1,4 +1,4 @@
-package com.mbobiosio.connectivitylivedata
+package com.mbobiosio.connectionlivedata
 
 import android.os.Bundle
 import android.util.Log
@@ -11,10 +11,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val lifecycleService = LifecycleService(this)
-        lifecycleService.observe(this, {
+        val connectionLiveData = ConnectionLiveData(this)
+        connectionLiveData.observe(this, {
             Log.d("Status", "$it")
-            status.text = it.toString()
+            when(it) {
+                true -> status.text = getString(R.string.connected)
+                else -> status.text = getString(R.string.disconnected)
+            }
         })
     }
 }

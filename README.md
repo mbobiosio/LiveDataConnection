@@ -3,6 +3,7 @@
 [![Platform](https://img.shields.io/badge/platform-android-brightgreen)](https://developer.android.com/reference)
 [![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://developer.android.com/studio/releases/platforms#4.1)
 [![](https://jitpack.io/v/mbobiosio/ConnectivityLiveData.svg)](https://jitpack.io/#mbobiosio/ConnectivityLiveData)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=mbobiosio_LifecycleConnectivity&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=mbobiosio_LifecycleConnectivity)
 
 <br>
 A super simple, super light-weight lifecycle aware solution written in Kotlin that helps you to capture network connectivity events with support for lower APIs
@@ -20,17 +21,17 @@ allprojects {
 }
 ```
 
-Add lifecycleconnectivity dependency to your project's <b>module</b> build.gradle
+Add connectionlivedata dependency to your project's <b>module</b> build.gradle
 
 ```groovy
-implementation 'com.github.mbobiosio:lifecycleconnectivity:1.0.2'
+implementation 'com.github.mbobiosio:connectionlivedata:1.0.3'
 ```
 
 -   Use in your Activity
 
 ```kotlin
- val lifecycleService = LifecycleService(this)
- lifecycleService.observe(this, {
+ val connectionLiveData = ConnectionLiveData(this)
+ connectionLiveData.observe(this, {
      Log.d("Status", "$it")
  })
 ```
@@ -38,9 +39,9 @@ implementation 'com.github.mbobiosio:lifecycleconnectivity:1.0.2'
 -   Use in your Fragment
 
 ```kotlin
- val lifecycleService = LifecycleService(activity as Activity)
- lifecycleService.observe(viewLifecycleOwner, {
-
+ val connectionLiveData = ConnectionLiveData(activity as Activity)
+ connectionLiveData.observe(viewLifecycleOwner, {
+    Log.d("Status", "$it")
  })
 ```
 

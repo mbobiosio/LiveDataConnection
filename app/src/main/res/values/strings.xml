@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ConnectivityLiveData</string>
+    <string name="app_name">ConnectionLiveData</string>
+    <string name="connected">Connected!!!</string>
+    <string name="disconnected">Disconnected!!!</string>
 </resources>

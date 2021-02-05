@@ -1,4 +1,4 @@
-package com.mbobiosio.connectivitylivedata
+package com.mbobiosio.connectionlivedata
 
 import android.annotation.TargetApi
 import android.content.BroadcastReceiver
@@ -12,10 +12,9 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 
 @Suppress("DEPRECATION")
-class LifecycleService(private val context: Context) : LiveData<Boolean>() {
+class ConnectionLiveData(private val context: Context) : LiveData<Boolean>() {
 
-    private val connManager: ConnectivityManager =
-        context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+    private val connManager: ConnectivityManager = context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
     private lateinit var connCallback: ConnectivityManager.NetworkCallback
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
